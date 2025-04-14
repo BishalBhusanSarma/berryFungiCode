@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+#root {
+  max-width: 1440px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: white;
+  font-family: "Roboto Slab", serif;
+  padding: 0 16px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+
+/* Logo Styling */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+
+/* 🌟 Custom Background for Dots */
+.custom-dots {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 15px 10px;
+  border-radius: 16px;
+  width: fit-content;
+  height: 24px; /* Ensuring proper alignment */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* 🔹 Properly Align Dots Horizontally */
+.slick-dots {
+  display: flex !important;
+  justify-content: center !important; /* Centers horizontally */
+  align-items: center !important; /* Centers vertically */
+  width: fit-content;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 30px; /* Adjust if needed */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* 🎯 Dots are Equal Size and Centered */
+.slick-dots li {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  list-style: none;
+}
+
+.slick-dots li button {
+  width: 12px !important;  /* Change this to your desired size */
+  height: 12px !important;
+  border-radius: 50%;
+  background-color: #aaa !important; /* Default inactive dot */
+  border: none !important;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ✅ Active Dot (Black, Slightly Bigger) */
+/* 🏆 Ensure Active Dot is Visible */
+.slick-dots li.slick-active button {
+  background-color: black !important; /* Force black color */
+  transform: scale(1.2); /* Slightly larger */
+  z-index: 10 !important; /* Ensure it's on top */
+}
+
+/* 🛠 Remove Default Slick Dot Styling */
+.slick-dots li button::before {
+  display: none !important;
+}
+
+/* 🌟 Fixing Image Layout */
+.hero-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.slider-wrapper {
+  width: 90vw;
+  max-width: 1200px;
+  position: relative;
+  overflow: hidden;
+}
+
+.slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 520px;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .slick-dots {
+    bottom: 15px !important;
+  }
+
+  .slick-dots li button {
+    width: 9px;
+    height: 9px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .slick-dots {
+    bottom: 10px !important;
+  }
+
+  .slick-dots li button {
+    width: 8px;
+    height: 8px;
+  }
+}
